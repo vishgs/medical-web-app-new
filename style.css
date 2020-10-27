@@ -1,0 +1,94 @@
+#login-body{
+
+    background: url("/images/bg.jpg") center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons p{
+
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+.identify-user-button-active{
+
+    border: 2px;
+    background: #34C759;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    color: white;
+}
+.identify-user-button-inactive{
+
+    border: 2px solid #34C759;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    color: black;
+}
+.login-form{
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+#registration-body{
+
+    background: url("/images/register.jpg") center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+
+.register-form{
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.active{
+
+    border-bottom: 2px solid white;
+}
+.divs{
+    margin-bottom: 30px;
+}
+.date-and-time{
+
+    border-top: 1px solid rgb(75, 75, 75);
+    border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+#appointment-body{
+
+    background: url("/images/register.jpg") center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+
+.appointment-form{
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
