@@ -1,6 +1,6 @@
 #login-body{
 
-    background: url("/images/bg.jpg") center;
+    background: url("./images/bg.jpg") center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -46,7 +46,7 @@
 
 #registration-body{
 
-    background: url("/images/register.jpg") center;
+    background: url("./images/register.jpg") center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -77,7 +77,7 @@
 
 #appointment-body{
 
-    background: url("/images/register.jpg") center;
+    background: url("./images/register.jpg") center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
