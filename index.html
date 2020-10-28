@@ -14,7 +14,7 @@
     <title>Medical App</title>
 </head>
 
-<body id="login-body">
+<body id="login-body" onload="hint()">
 
     <section id="login-page">
         <div class="container">
@@ -40,30 +40,33 @@
                         <form class="p-4">
                             <div class="form-group">
                                 <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone
                                     else.</small>
                             </div>
-                            <label for="basic-url">Password</label>
+                            <label for="password">Password</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Enter Password" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" id="password" placeholder="Enter Password"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                  <span role="button" class="input-group-text" id="basic-addon2">forgot ?</span>
+                                    <span role="button" class="input-group-text" id="basic-addon2">forgot ?</span>
                                 </div>
-                              </div>
+                            </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Show password</label>
                             </div>
                             <div class="text-center mt-5">
-                                <button type="button" class="btn btn-primary">Submit</button>
+                                <button onclick="login()" type="button" class="btn btn-primary">Submit</button>
                             </div>
-                            
+
                         </form>
 
                         <div class="text-center mt-5">
-                            <h6>New User ? <span><a style="text-decoration: none; color: #007aff;" href="register.html">Register</a></span></h6>
+                            <h6>New User ? <span><a style="text-decoration: none; color: #007aff;"
+                                        href="register.html">Register</a></span></h6>
                         </div>
                     </div>
 
@@ -83,17 +86,48 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-        <script>
-            function patient(){
-                $("#patient").removeClass("identify-user-button-inactive").addClass("identify-user-button-active")
-                $("#hospital").removeClass("identify-user-button-active").addClass("identify-user-button-inactive")
-            }
+    <script>
 
-            function hospital(){
-                $("#hospital").removeClass("identify-user-button-inactive").addClass("identify-user-button-active")
-                $("#patient").removeClass("identify-user-button-active").addClass("identify-user-button-inactive")
+        function hint() {
+            alert("patient" + "\n\n" + "email: user, password: 123" + "\n\n\n" + "hospital" + "\n\n" + "email: hos, password: 123")
+        }
+        function patient() {
+            $("#patient").removeClass("identify-user-button-inactive").addClass("identify-user-button-active")
+            $("#hospital").removeClass("identify-user-button-active").addClass("identify-user-button-inactive")
+        }
+
+        function hospital() {
+            $("#hospital").removeClass("identify-user-button-inactive").addClass("identify-user-button-active")
+            $("#patient").removeClass("identify-user-button-active").addClass("identify-user-button-inactive")
+        }
+        function login() {
+
+            var email = $("#email").val()
+            var password = $("#password").val()
+
+            if (email == "" && password == "") {
+                alert("Enter credentials")
+            } else {
+                var identifyUser = $("p.identify-user-button-active").text()
+                if (identifyUser == "patient") {
+                    if (email == "user" && password == "123") {
+
+                        window.location.href = "home.html"
+                    } else {
+                        alert("Wrong credentials")
+                    }
+                } else if (identifyUser == "hospital") {
+                    if (email == "hos" && password == "123") {
+
+                        window.location.href = "hospital-home.html"
+                    } else {
+                        alert("Wrong credentials")
+                    }
+                }
             }
-        </script>
+        }
+
+    </script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
